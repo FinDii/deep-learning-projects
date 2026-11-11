@@ -1,0 +1,7 @@
+
+nltk>=3.0.0
+notebook>=7.0.0
+seaborn
+torch>=2.0.0
+torchvision
+tqdm>=4.0.0

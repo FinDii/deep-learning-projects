@@ -1,0 +1,15 @@
+experiment,best_val_dsc,best_epoch,network,downsample,upsample,loss,optimizer,lr,weight_decay,scheduler,amp,elastic,epochs,batch_size,final_val_loss
+baseline (maxpool),0.908689,89,,,,,,,,,,,,,
+pixelshuffle_adam,0.9134352456410262,93,unet,maxpool,pixelshuffle,dice,adam,0.0001,0,none,FALSE,FALSE,100,16,0.6834804729390337
+adamw,0.9131259932153307,92,unet,maxpool,convtranspose,dice,adamw,0.0001,0.0001,none,FALSE,FALSE,100,16,0.6889246013781988
+pixelshuffle_adamw,0.9130781775755015,87,unet,maxpool,pixelshuffle,dice,adamw,0.0001,0.0001,none,FALSE,FALSE,100,16,0.686894391
+up_bilinear,0.912817063,92,unet,maxpool,bilinear,dice,adam,0.0001,0,none,FALSE,FALSE,100,16,0.677377209
+DiceBCE,0.9127951711776104,83,unet,maxpool,convtranspose,dice_bce,adam,0.0001,0,none,FALSE,FALSE,100,16,0.6889184142701932
+BCE_Dice_EqualW,0.9117634933640619,98,unet,maxpool,convtranspose,dice_bce,adam,0.0001,0,none,FALSE,FALSE,100,16,0.6986796966509397
+BCE_Dice_BCEMore,0.9109763977636451,85,unet,maxpool,convtranspose,dice_bce,adam,0.0001,0,none,FALSE,FALSE,100,16,0.27906445506138866
+amp,0.9104192683583452,98,unet,maxpool,convtranspose,dice,adam,0.0001,0,none,TRUE,FALSE,100,16,0.6855107139389685
+elastic,0.9099530543796795,92,unet,maxpool,convtranspose,dice,adam,0.0001,0,none,FALSE,TRUE,100,16,0.6892242405072911
+BCE_Dice_DiceMore,0.9096030250810798,89,unet,maxpool,convtranspose,dice_bce,adam,0.0001,0,none,FALSE,FALSE,100,16,0.7081344104545468
+down_stride,0.9052331731492073,67,unet,stride_conv,convtranspose,dice,adam,0.0001,0,none,FALSE,FALSE,100,16,0.6866725745763687
+focal,0.8946117339613139,80,unet,maxpool,convtranspose,focal,adam,0.0001,0,none,FALSE,FALSE,100,16,0.000832366
+ultimate,0.8853703210854229,75,unet,maxpool,convtranspose,focal,adamw,0.0001,0,none,TRUE,TRUE,100,16,0.000775286
